@@ -210,11 +210,11 @@ $(document).on("click", ".p2reset", function () {
 $(document).on("click", "#r", function () {
 
     if (sessionStorage.getItem("myPlayNumber") == "one") {
-        database.ref("p1pick").set("rock");
+        database.ref("p1pick").set("cobblestone");
         $("#playbuttons").empty();
 
     } else if (sessionStorage.getItem("myPlayNumber") == "two") {
-        database.ref("p2pick").set("rock");
+        database.ref("p2pick").set("cobblestone");
         $("#playbuttons").empty();
 
     }
@@ -224,11 +224,11 @@ $(document).on("click", "#r", function () {
 $(document).on("click", "#p", function () {
 
     if (sessionStorage.getItem("myPlayNumber") == "one") {
-        database.ref("p1pick").set("paper");
+        database.ref("p1pick").set("parchment");
         $("#playbuttons").empty();
 
     } else if (sessionStorage.getItem("myPlayNumber") == "two") {
-        database.ref("p2pick").set("paper");
+        database.ref("p2pick").set("parchment");
         $("#playbuttons").empty();
 
     }
@@ -238,11 +238,11 @@ $(document).on("click", "#p", function () {
 $(document).on("click", "#s", function () {
 
     if (sessionStorage.getItem("myPlayNumber") == "one") {
-        database.ref("p1pick").set("scissors");
+        database.ref("p1pick").set("shears");
         $("#playbuttons").empty();
 
     } else if (sessionStorage.getItem("myPlayNumber") == "two") {
-        database.ref("p2pick").set("scissors");
+        database.ref("p2pick").set("shears");
         $("#playbuttons").empty();
 
     }
@@ -250,19 +250,19 @@ $(document).on("click", "#s", function () {
 });
 
 function whoWins(p1pick, p2pick, p1name, p2name) {
-    if (p1pick == "rock" && p2pick == "scissors" || p1pick == "paper" && p2pick == "rock" || p1pick == "scissors" && p2pick == "paper") {
+    if (p1pick == "cobblestone" && p2pick == "shears" || p1pick == "parchment" && p2pick == "cobblestone" || p1pick == "shears" && p2pick == "parchment") {
 
         $(".topP").text(p1name + " just WONNETH. They pick'd " + p1pick.toUpperCase() + " and " + p2name + " pick'd " + p2pick.toUpperCase() + ". Maketh sure to click reset!");
         database.ref("p1pick").set("");
         database.ref("p2pick").set("");
 
-    }else if (p1pick == "scissors" && p2pick == "rock" || p1pick == "rock" && p2pick =="paper" || p1pick == "paper" && p2pick == "scissors") {
+    }else if (p1pick == "shears" && p2pick == "cobblestone" || p1pick == "cobblestone" && p2pick =="parchment" || p1pick == "parchment" && p2pick == "shears") {
 
         $(".topP").text(p2name + " just WONNETH. They pick'd " + p2pick.toUpperCase() + " and " + p1name + " pick'd " + p1pick.toUpperCase() + ". Maketh sure to click reset!");
         database.ref("p1pick").set("");
         database.ref("p2pick").set("");
 
-    }else if (p1pick == "scissors" && p2pick == "scissors" || p1pick == "rock" && p2pick =="rock" || p1pick == "paper" && p2pick == "paper") {
+    }else if (p1pick == "shears" && p2pick == "shears" || p1pick == "cobblestone" && p2pick =="cobblestone" || p1pick == "parchment" && p2pick == "parchment") {
 
         $(".topP").text("Thou has't pick'd the same item. Maketh sure to click reset!");
         database.ref("p1pick").set("");

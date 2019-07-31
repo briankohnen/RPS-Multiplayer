@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-image: url("../images/ep_naturalwhite.png")
+    background-image: url("../images/ep_naturalwhite.png");
+    font-family: 'Almendra', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .test {
     overflow: auto;
@@ -19,6 +20,7 @@ body {
 .topText {
     word-spacing: 15px;
     color: white;
+    font-family: 'Almendra Display', 'Almendra', 'Arial Narrow', Arial, sans-serif;
 }
 .topP {
     color: greenyellow;
@@ -28,25 +30,31 @@ body {
     width: 980px;
     height: 485px;
     margin: 0 auto;
-    background: lightgrey;
+    background: black;
     display: grid;
     grid-template-rows: 100px 100px 100px 100px;
     grid-auto-columns: 245px 245px 245px 245px;
 }
 #playerOne {
-    background: white;
+    background: lightpink;
     text-align: center;
     grid-row: 1 / 3;
     grid-column: 1 / 3;
     border: 1px black solid;
 }
+#playerOne:hover {
+    cursor: crosshair;
+}
 #playerTwo {
-    background: white;
+    background: lightpink;
     float: right;
     text-align: center;
     grid-row: 1 / 3;
     grid-column: 3 / 5;
     border: 1px black solid;
+}
+#playerTwo:hover {
+    cursor: crosshair;
 }
 .msgSection {
     background: lightblue;

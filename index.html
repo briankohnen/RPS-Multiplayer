@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stone, Papyrus, Blades</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head>
+<body>
+
+<div class="bigwrap">
+    <div class="topper">
+        <h1 class="topText">Stone, Papyrus, Blades</h1>
+        <p class="topP">Click an empty box to join the game</p>
+    </div>
+
+    <div class="gameWrap">
+
+            <div class="plSelect" id="playerOne">
+                <h1 id="p1Name"></h1>
+                <div class="p1Info">
+                </div>
+            </div>
+
+            <div class="plSelect" id="playerTwo">
+                <h1 id="p2Name"></h1>
+                <div class="p2Info">
+                </div>
+            </div>
+
+
+        <div class="msgSection">
+            <div class="messageBoard">
+                    <div class="messages">
+                </div>
+            </div>
+
+            <form id="inpForm">
+                <input type="text" id="userInput" placeholder="your message here"></input>
+                <button id="submitInput">submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+
+</body>
+</html>
